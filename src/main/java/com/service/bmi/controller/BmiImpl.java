@@ -1,0 +1,21 @@
+package com.service.bmi.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import io.servicecomb.provider.pojo.RpcSchema;
+
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.CsePojoDemoCodegen", date = "2018-01-24T03:46:22.658Z")
+
+@RpcSchema(schemaId = "bmi")
+public class BmiImpl implements Bmi{
+
+    @Autowired
+    private BmiDelegate bmiDelegate;
+
+
+    public String helloworld(String name) {
+
+        return bmiDelegate.helloworld(name);
+    }
+
+}
